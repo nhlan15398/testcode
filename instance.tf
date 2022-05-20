@@ -18,10 +18,10 @@ resource "aws_instance" "HelloWorld" {
   subnet_id = aws_subnet.public_subnet.id
   vpc_security_group_ids = [aws_security_group.allow_http_ssh.id]
   key_name = aws_key_pair.nhlan-public-key.key_name
-  ebs_block_device {
-    device_name = "/dev/xvda"
-    volume_size = 50
-  }
+#  ebs_block_device {
+#    device_name = "/dev/xvda"
+#    volume_size = 50
+#  }
   user_data = "${file("templates/helloworld.sh")}"
   timeouts {
     create = "100s"
