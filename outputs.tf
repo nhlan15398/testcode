@@ -16,6 +16,6 @@ output "aws_internet_gateway" {
 output "aws_route_table" {
   value = aws_route_table.route_table.id
 }
-output "aws_s3_bucket" {
-  value = aws_s3_bucket.s3_terraform.id
-}
+# output "aws_s3_bucket" {
+#   value = aws_s3_bucket.s3_terraform.id
+# }
