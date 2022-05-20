@@ -8,7 +8,7 @@ data "aws_ami" "amazon-linux-2" {
       name = "virtualization-type"
       values = ["hvm"]
     }
-    owners = [ "203220644778" ]
+    owners = [ "137112412989" ]
 }
 
 resource "aws_instance" "HelloWorld" {

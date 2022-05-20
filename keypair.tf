@@ -6,6 +6,6 @@ resource "aws_key_pair" "nhlan-public-key" {
   key_name   = "nhlan-public-key"
   public_key = tls_private_key.nhlan-private-key.public_key_openssh
   provisioner "local-exec" {
-    command = "Echo '${tls_private_key.nhlan-private-key.private_key_pem}'> ./nhlan-private-key.pem"
+    command = "echo '${tls_private_key.nhlan-private-key.private_key_pem}'> ./nhlan-private-key.pem"
   }
 }
